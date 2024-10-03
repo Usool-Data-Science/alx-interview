@@ -10,13 +10,13 @@ def pascal_triangle(n):
     if n <= 0:
         return []
 
-    triangle = [[1]] 
+    pasTran = [[1]]  # Initialize with the first row [1]
 
     for i in range(1, n):
-        row = [1] 
-        for j in range(1, i):
-            row.append(triangle[i-1][j-1] + triangle[i-1][j])
-        row.append(1)
-        triangle.append(row)
+        prev_row = pasTran[-1]  # Get the previous row
+        # Construct the new row by adding pairs of adjacent values from the previous row
+        new_row = [1] + [prev_row[j] + prev_row[j + 1] for j in range(len(prev_row) - 1)] + [1]
+        pasTran.append(new_row)
 
-    return triangle
+    return pasTran
+
