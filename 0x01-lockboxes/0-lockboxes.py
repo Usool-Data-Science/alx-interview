@@ -3,6 +3,7 @@
 Solution to lock-box interview question.
 """
 
+
 def canUnlockAll(boxes):
     """
         Checks if all boxes can be unlocked.
@@ -24,4 +25,3 @@ def canUnlockAll(boxes):
                 stack.append(key)
 
     return len(opened_boxes) == len(boxes)
-
