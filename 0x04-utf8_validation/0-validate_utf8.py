@@ -1,5 +1,14 @@
+#!/usr/bin/python3
+"""
+A script that tests if a data is utf-8 compatible.
+"""
+
+
 def validUTF8(data):
-    # Number of bytes in the current UTF-8 character
+    """
+    Accept data and return True if it is utf-8 compatible
+    or False if otherwise
+    """
     num_bytes = 0
 
     # Masks to check the leading bits of a byte
